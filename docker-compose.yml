@@ -15,7 +15,8 @@ services:
     redmine:
         image: redmine:3.4
         volumes:
-             - ./data/redmine/sqlite/:/usr/src/redmine/sqlite/
-             - ./data/redmine/files/:/usr/src/redmine/files/
+             - ./data/redmine_home/sqlite:/usr/src/redmine/sqlite
+             - ./data/redmine_home/files:/usr/src/redmine/files
+             - ./data/redmine_home/public:/usr/src/redmine/public
         ports:
           - 8082:3000
