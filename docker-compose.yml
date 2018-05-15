@@ -14,6 +14,13 @@ services:
 
     redmine:
         image: sameersbn/redmine:3.4.4-2
+        environment:
+            DB_ADAPTER: postgresql
+            DB_HOST: postgres
+            DB_PORT: 5432
+            DB_USER: redmine
+            DB_PASS: password
+            DB_NAME: redmine_production
         volumes:
              - ./var/redmine_home:/home/redmine/data
         ports:
