@@ -22,13 +22,13 @@ services:
             DB_PASS: password
             DB_NAME: redmine_production
             SMTP_ENABLED: "true"
-            SMTP_METHOD: ":smtp"
             SMTP_DOMAIN: smtp.gmail.com
             SMTP_HOST: smtp.gmail.com
             SMTP_PORT: 587
             SMTP_USER: mailer@example.com
             SMTP_PASS: password
             SMTP_STARTTLS: "true"
+            SMTP_AUTHENTICATION: :plain
         volumes:
              - ./var/redmine_home:/home/redmine/data
         ports:
