@@ -15,6 +15,6 @@ services:
     redmine:
         image: redmine:3.4
         volumes:
-             - ./data/redmine:/usr/src/redmine/files
+             - ./data/redmine:/usr/src/redmine
         ports:
           - 8082:3000
