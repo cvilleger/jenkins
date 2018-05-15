@@ -2,3 +2,4 @@
 /data/
 !/data/jenkins_home/.gitkeep
 !/data/redmine/.gitkeep
+!/data/redmine/config/database.yml
