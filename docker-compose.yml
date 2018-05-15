@@ -17,6 +17,6 @@ services:
         volumes:
              - ./data/redmine_home/sqlite:/usr/src/redmine/sqlite
              - ./data/redmine_home/files:/usr/src/redmine/files
-             - ./data/redmine_home/public:/usr/src/redmine/public
+             - ./data/redmine_home/public/theme:/usr/src/redmine/public/theme
         ports:
           - 8082:3000
