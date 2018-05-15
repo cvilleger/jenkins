@@ -5,18 +5,27 @@ services:
     jenkins:
         image: jenkins/jenkins:2.122
         environment:
-            JENKINS_HOST_HOME: ./data/jenkins
+            JENKINS_HOST_HOME: /data/jenkins
         volumes:
-             - ./data/jenkins_home:/var/jenkins_home
+             - ./var/jenkins_home:/var/jenkins_home
              - /var/run/docker.sock:/var/run/docker.sock
         ports:
-          - 8081:8080
+            - 8081:8080
 
     redmine:
-        image: redmine:3.4
+        image: sameersbn/redmine:3.4.4-2
         volumes:
-             - ./data/redmine_home/sqlite:/usr/src/redmine/sqlite
-             - ./data/redmine_home/files:/usr/src/redmine/files
-             - ./data/redmine_home/public/theme:/usr/src/redmine/public/theme
+             - ./var/redmine_home:/home/redmine/data
         ports:
-          - 8082:3000
+            - 8082:80
+        depends_on:
+            - postgres
+
+    postgres:
+        image: sameersbn/postgresql:9.6-2
+        environment:
+            DB_USER: redmine
+            DB_PASS: password
+            DB_NAME: redmine_production
+        volumes:
+            - ./var/postgresql:/var/lib/postgresql
