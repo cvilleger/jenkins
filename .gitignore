@@ -1,5 +1,4 @@
 /docker-compose.override.yml
 /data/
 !/data/jenkins_home/.gitkeep
-!/data/redmine/.gitkeep
-!/data/redmine/config/database.yml
+!/data/redmine_home/.gitkeep
