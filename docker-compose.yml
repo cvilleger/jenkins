@@ -17,5 +17,6 @@ services:
         volumes:
              - ./data/redmine/sqlite/:/usr/src/redmine/sqlite/
              - ./data/redmine/files/:/usr/src/redmine/files/
+             - ./data/redmine/config/:/usr/src/redmine/config/
         ports:
           - 8082:3000
