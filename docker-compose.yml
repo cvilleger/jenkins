@@ -28,8 +28,8 @@ services:
             SMTP_PORT: 587
             SMTP_USER: mailer@example.com
             SMTP_PASS: password
-            SMTP_STARTTLS: true
-            IMAP_ENABLED: true
+            SMTP_STARTTLS: "true"
+            IMAP_ENABLED: "true"
             IMAP_HOST: imap.gmail.com
             IMAP_USER: mailer@example.com
             IMAP_PASS: password
