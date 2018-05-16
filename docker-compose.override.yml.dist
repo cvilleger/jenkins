@@ -29,3 +29,7 @@ services:
         environment:
             DB_USER: redmine
             DB_PASS: password
+
+    sonarqube:
+        ports:
+            - 8083:9000
