@@ -1,6 +1,4 @@
-FROM jenkins/jenkins:2.122
-
-USER root
+FROM bitnami/jenkins
 
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
