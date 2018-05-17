@@ -4,9 +4,6 @@ services:
 
     jenkins:
         build: .
-        environment:
-            JENKINS_HOST_HOME: /home/jenkins/agile/var/jenkins_home
-            JENKINS_HOME: /home/jenkins/agile/var/jenkins_home
         volumes:
              - ./var/jenkins_home:/var/jenkins_home
              - /var/run/docker.sock:/var/run/docker.sock
