@@ -3,7 +3,7 @@ version: '3'
 services:
 
     jenkins:
-        image: bitnami/jenkins
+        build: .
         volumes:
             - ./var/jenkins_home:/bitnami
             - /usr/bin/docker:/usr/bin/docker
