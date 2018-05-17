@@ -1,5 +1,7 @@
 FROM bitnami/jenkins
 
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
@@ -15,6 +17,7 @@ RUN add-apt-repository \
     stable"
 
 RUN apt-get update && apt-get install -y docker-ce
+
 #
 #RUN usermod -aG docker jenkins
 #
