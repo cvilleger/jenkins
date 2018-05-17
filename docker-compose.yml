@@ -5,9 +5,9 @@ services:
     jenkins:
         build: .
         environment:
-            JENKINS_HOST_HOME: /home/jenkins
+            JENKINS_HOST_HOME: ./var/jenkins_home
         volumes:
-             - /home/jenkins:/home/jenkins
+             - ./var/jenkins_home:/var/jenkins_home
              - /var/run/docker.sock:/var/run/docker.sock
         ports:
             - 8081:8080
