@@ -1,5 +1,8 @@
 FROM bitnami/jenkins
 
+ENV DEBIAN_FRONTEND noninteractive
+RUN DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
