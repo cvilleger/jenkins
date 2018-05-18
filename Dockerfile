@@ -1,14 +1,13 @@
 FROM bitnami/jenkins
 
-ARG DEBIAN_FRONTEND=noninteractive
-
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
     gnupg2 \
     software-properties-common \
-    libltdl7
+    libltdl7 \
+    apt-utils
 
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 
@@ -17,7 +16,7 @@ RUN add-apt-repository \
     $(lsb_release -cs) \
     stable"
 
-RUN apt-get update && apt-get install -y docker-ce --fix-missing
+RUN apt-get update && apt-get install -y docker-ce
 
 #RUN usermod -aG docker jenkins
 #
