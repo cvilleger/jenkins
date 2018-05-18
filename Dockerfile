@@ -1,8 +1,5 @@
 FROM bitnami/jenkins
 
-ENV DEBIAN_FRONTEND noninteractive
-RUN DEBIAN_FRONTEND=noninteractive
-
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
@@ -12,8 +9,6 @@ RUN apt-get update && apt-get install -y \
     libltdl7 \
     apt-utils
 
-RUN apt-get remove makedev
-
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 
 RUN add-apt-repository \
@@ -21,7 +16,7 @@ RUN add-apt-repository \
     $(lsb_release -cs) \
     stable"
 
-RUN apt-get update && apt-get install -y docker-ce
+RUN apt-get update && apt-get install -y docker-ce -q
 
 RUN usermod -aG docker jenkins
 
