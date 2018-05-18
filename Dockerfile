@@ -1,6 +1,8 @@
 FROM jenkins/jenkins:2.122
 
-RUN apt-get install \
+USER root
+
+RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
