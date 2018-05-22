@@ -2,14 +2,6 @@ version: '3'
 
 services:
 
-    jenkins:
-        build: .
-        volumes:
-            - ./jenkins_home:/var/jenkins_home
-            - /var/run/docker.sock:/var/run/docker.sock
-        ports:
-            - 8081:8080
-
     redmine:
         image: sameersbn/redmine:3.4.4-2
         environment:
