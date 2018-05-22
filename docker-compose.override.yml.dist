@@ -28,4 +28,4 @@ services:
 
     sonarqube:
         ports:
-            - 8083:9000
+            - 9000:9000
