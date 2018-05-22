@@ -5,7 +5,7 @@ services:
     jenkins:
         build: .
         volumes:
-            - /home/jenkins/agile/jenkins_home:/var/jenkins_home
+            - ./jenkins_home:/var/jenkins_home
             - /var/run/docker.sock:/var/run/docker.sock
         ports:
             - 8081:8080
