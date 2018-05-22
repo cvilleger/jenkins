@@ -38,4 +38,4 @@ services:
     sonarqube:
         image: sonarqube:7.1
         ports:
-            - 8083:9000
+            - 9000:9000
