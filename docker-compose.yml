@@ -37,5 +37,17 @@ services:
 
     sonarqube:
         image: sonarqube:7.1
+        environment:
+            SONARQUBE_JDBC_USERNAME: sonar
+            SONARQUBE_JDBC_PASSWORD: sonar
+            SONARQUBE_JDBC_URL: jdbc:postgresql://postgresonar/sonar
         ports:
             - 9000:9000
+
+    postgresonar:
+        image: postgres:10.4-alpine
+        environment:
+            POSTGRES_USER: sonar
+            POSTGRES_PASSWORD: sonar
+        volumes:
+            - ./var/postgresonar:/var/lib/postgresql
