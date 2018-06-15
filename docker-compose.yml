@@ -51,3 +51,11 @@ services:
             POSTGRES_PASSWORD: sonar
         volumes:
             - ./var/postgresonar:/var/lib/postgresql
+
+    elk:
+        image: sebp/elk
+        ports:
+            - "5601:5601"
+
+        volumes:
+            - /path/to/your/logstash:/etc/logstash
