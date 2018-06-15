@@ -56,7 +56,5 @@ services:
         image: sebp/elk
         ports:
             - "5601:5601"
-        environment:
-           MAX_MAP_COUNT: 262144
         volumes:
             - /path/to/your/logstash:/etc/logstash
