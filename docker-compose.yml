@@ -58,5 +58,6 @@ services:
             - "5601:5601"
             - "9200:9200"
             - "5044:5044"
+            - "12201:12201"
         volumes:
-            - /path/to/your/logstash:/etc/logstash
+            - /var/elk/logstash:/etc/logstash
