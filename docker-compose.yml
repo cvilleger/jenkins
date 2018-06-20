@@ -60,4 +60,4 @@ services:
             - "5044:5044"
             - "12201:12201"
         volumes:
-            - /var/elk/logstash:/etc/logstash
+            - ./var/elk/logstash/:/etc/logstash/
