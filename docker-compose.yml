@@ -62,3 +62,4 @@ services:
         volumes:
             - ./var/elk/logstash/:/etc/logstash/
             - /home/jenkins/workspace/JenkinsCoreIntegration/core/var/log/:/var/log/integration/core/
+            - /home/jenkins/workspace/JenkinsMiddlewareIntegration/api/var/log/:/var/log/mMiddleware/core/
