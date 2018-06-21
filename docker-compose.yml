@@ -61,4 +61,4 @@ services:
             - "12201:12201"
         volumes:
             - ./var/elk/logstash/:/etc/logstash/
-            - /home/jenkins/workspace/JenkinsCoreIntegration/core/var/log:./var/log/integration/
+            - ./var/log/integration/core/:/home/jenkins/workspace/JenkinsCoreIntegration/core/var/log/
